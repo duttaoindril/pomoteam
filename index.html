@@ -1,0 +1,106 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pomoteam | Pomodoro for Teams</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="light-blue darken-1">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo center">PomoTeam</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="?me=jaggu">Jaggu</a></li>
+                    <li><a href="?me=appan">Appan</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="?me=jaggu">Jaggu</a></li>
+                    <li><a href="?me=appan">Appan</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row center">
+            <h2 id="typetime" class="header center orange-text">Chill time!</h2>
+            <h3 id="whome" class="col s12 light">I am Jaggu!</h3>
+            <h1><b id="mins"></b><b id="blink"> : </b><b id="secs"></b></h1>
+        </div>
+        <div class="row center">
+            <a id="ready" class="btn-large waves-effect waves-light orange">I am ready!</a>
+        </div>
+        <div class="row">
+            <div id="adjusta" class="col s5 offset-s1">
+                <div class="card-panel">
+                    <span>
+                        <h5 class="center-align">Appan is <b id="appanready">Not Ready.</b></h5>
+                    </span>
+                </div>
+            </div>
+            <div id="adjustb" class="col s5">
+                <div class="card-panel">
+                    <span>
+                        <h5 class="center-align">Jaggu is <b id="jagguready">Not Ready.</b></h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="tasks" class="row">
+            <div id="adjustc" class="col s6 offset-s3">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#appantasks">Appan</a></li>
+                    <li class="tab col s3"><a class="active" href="#jaggutasks">Jaggu</a></li>
+                </ul>
+            </div>
+            <div id="appantasks" class="col s6 offset-s3">
+                <ul class="collection with-header s12 m6">
+                    <li class="collection-header center"><h5>Tasks<a href="#tasks" class="secondary-content"><i class="material-icons">done_all</i></a></h5></li>
+                </ul>
+            </div>
+            <div id="jaggutasks" class="col s6 offset-s3">
+                <ul class="collection with-header s12 m6">
+                    <li class="collection-header center"><h5>Tasks<a href="#tasks" class="secondary-content"><i class="material-icons">done_all</i></a></h5></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="card hoverable">
+                <iframe class="col s12" src="https://www.google.com/calendar/embed?title=Oindril%20Dutta&#39;s%20Calendar%20for%20Appan%20%3C3%20Jaggu&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=duttaoindril%40gmail.com&amp;color=%23853104&amp;src=m42f4mceaqrc5asekmfn0l3dl0%40group.calendar.google.com&amp;color=%2329527A&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23060D5E&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " height="800" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row center">
+            <a id="reset" class="btn-large waves-effect waves-light orange">Reset</a>
+        </div>
+        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+            <a class="btn-floating btn-large waves-effect waves-light red">
+                <i class="material-icons">add</i>
+            </a>
+            <ul>
+              <li><a class="btn-floating blue tooltipped" data-position="left" data-delay="25" data-tooltip="Import JSON Tasks"><i class="material-icons">attach_file</i></a></li>
+              <li onclick="$('#modal1').openModal();"><a class="btn-floating yellow darken-1 tooltipped" data-position="left" data-delay="25" data-tooltip="Add a Task"><i class="material-icons">mode_edit</i></a></li>
+            </ul>
+        </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Add a task</h4>
+                <div class="input-field col s6">
+                    <input value="task" id="taskName" type="text" class="validate">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="add($('input').val())">Add</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+</body>
+</html>

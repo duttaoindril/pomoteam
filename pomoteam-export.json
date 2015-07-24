@@ -1,0 +1,16 @@
+{
+  "tasks" : {
+    "1tasks" : [ "Talk to Jaggu; Ask her things", "Ask Jappi for PomoTeam suggestions", "SJSU Quizzes, HW", "Math 22 HW & Test", "Fix personal website", "Look up Professors/Send Emails", "Make Lifestyle & DB", "Abroadler Meet", "Baby Noggin Interview", "Quora Problems", "Learn Rails", "Make android app OCR", "Aug 1 Hackathon", "Aug 7 Hackathon", "Submit change of major form Aug 20th" ],
+    "2tasks" : [ "Talk to Appan", "Write diaries for Appan" ]
+  },
+  "team1" : {
+    "data" : {
+      "breaktime" : 5,
+      "team" : [ null, false, false ],
+      "worktime" : 25
+    },
+    "timeleft" : 1500,
+    "timestarted" : 0,
+    "work" : true
+  }
+}
